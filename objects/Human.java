@@ -1,10 +1,9 @@
 package objects;
 
-import interfaces.GeneralActions;
 import interfaces.MentalActions;
 import interfaces.PhysicalActions;
 import interfaces.VoiceActions;
-import enums.*;
+import enums.Gender;
 
 public class Human implements VoiceActions, PhysicalActions, MentalActions, GeneralActions {
     private String name;
@@ -110,6 +109,8 @@ public class Human implements VoiceActions, PhysicalActions, MentalActions, Gene
         return name;
     }
 
-    public Gender getGender() {return this.gender;}
+    public Gender getGender() {
+        return this.gender;
+    }
 
 }
