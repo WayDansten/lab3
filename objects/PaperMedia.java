@@ -19,6 +19,8 @@ public abstract class PaperMedia extends Media implements PaperMediaActions {
     }
 
     @Override
-    public void read() {System.out.print("В " + this + " написано: " + super.getInformation());}
+    public void read() {
+        System.out.print("В " + this + " написано: " + super.getInformation());
+    }
 
 }
