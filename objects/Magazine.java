@@ -8,10 +8,14 @@ public class Magazine extends PaperMedia {
     }
 
     @Override
-    public String toString() {return "Журнал";}
+    public String toString() {
+        return "Журнал";
+    }
 
     @Override
-    public int hashCode() {return getHeading().hashCode() * getInformation().hashCode() * pageCount;}
+    public int hashCode() {
+        return getHeading().hashCode() * getInformation().hashCode() * pageCount;
+    }
 
     @Override
     public boolean equals(Object obj) {
