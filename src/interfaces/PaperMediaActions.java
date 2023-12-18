@@ -1,7 +1,7 @@
 package interfaces;
 
 public interface PaperMediaActions {
-    public void printout();
+    public void printOut();
     public void publish();
     public void read();
 }

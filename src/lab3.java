@@ -18,34 +18,33 @@ public class lab3 {
         House carlsonHouse = new House(1, RoofMaterial.WOOD, "Домик Карлсона");
         House smallsHouse = new House(10, RoofMaterial.ROOF_TILE, "Дом Малыша");
 
-        mother.decide("", Truth.TRUE);
-        father.decide("не говорить, что ", Truth.TRUE);
-        carlson.exist();
+        mother.decide("");
+        father.decide("не говорить, о " + carlson);
         System.out.println();
 
-        mother.understand("", Truth.TRUE);
-        father.understand("что будет происходить в " + smallsHouse + ", если ", Truth.TRUE);
+        mother.understand("");
+        father.understand("что будет происходить в " + smallsHouse + ", если ");
         programmeAboutCarlson.tellNewsStory();
-        newspaperAboutCarlson.printout();
-        magazineAboutCarlson.printout();
+        newspaperAboutCarlson.printOut();
+        magazineAboutCarlson.printOut();
         System.out.println();
 
-        bosse.know("всё это сам", Truth.TRUE);
+        bosse.know("всё это сам");
         System.out.println();
 
-        bosse.see(Truth.TRUE, "");
-        bethan.see(Truth.TRUE, "");
-        mother.see(Truth.TRUE, "");
-        father.see(Truth.TRUE, carlsonHouse.toString());
+        bosse.see("");
+        bethan.see("");
+        mother.see("");
+        father.see(carlsonHouse.toString());
         System.out.println();
 
-        bosse.climb(Truth.TRUE);
-        bethan.climb(Truth.TRUE);
-        mother.climb(Truth.TRUE);
-        father.climb(Truth.TRUE, smallsHouse.getRoof());
+        bosse.climb(smallsHouse.getRoof());
+        bethan.climb(smallsHouse.getRoof());
+        mother.climb(smallsHouse.getRoof());
+        father.climb(smallsHouse.getRoof());
         System.out.println();
 
-        small.show(Truth.TRUE, carlsonHouse);
+        small.show(carlsonHouse);
 
     }
 }

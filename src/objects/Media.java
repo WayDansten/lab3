@@ -10,9 +10,20 @@ public abstract class Media {
         this.heading = heading;
     }
 
-    public String getInformation() {return this.information;}
-    public void setInformation(String information) {this.information = information;}
-    public String getHeading() {return this.heading;}
-    public void setHeading(String heading) {this.heading = heading;}
+    public String getInformation() {
+        return this.information;
+    }
+    
+    public void setInformation(String information) {
+        this.information = information;
+    }
+    
+    public String getHeading() {
+        return this.heading;
+    }
+    
+    public void setHeading(String heading) {
+        this.heading = heading;
+    }
 
 }

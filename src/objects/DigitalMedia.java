@@ -12,12 +12,18 @@ public abstract class DigitalMedia extends Media implements DigitalMediaActions 
         this.mediaType = mediaType;
     }
 
-    public MediaType getMediaType() {return this.mediaType;}
+    public MediaType getMediaType() {
+        return this.mediaType;
+    }
 
     @Override
-    public void tellNewsStory() {System.out.print("По " + this.toString() + " идёт передача \"" + this.getHeading() + "\" ");}
+    public void tellNewsStory() {
+        System.out.print("По " + this.toString() + " идёт передача \"" + this.getHeading() + "\" ");
+    }
 
     @Override
-    public String toString() {return "Цифровое СМИ";}
+    public String toString() {
+        return "Цифровое СМИ";
+    }
 
 }

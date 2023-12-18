@@ -7,10 +7,14 @@ public class Newspaper extends PaperMedia {
     }
 
     @Override
-    public String toString() {return "Газета";}
+    public String toString() {
+        return "Газета";
+    }
 
     @Override
-    public int hashCode() {return getHeading().hashCode() * getInformation().hashCode();}
+    public int hashCode() {
+        return getHeading().hashCode() * getInformation().hashCode();
+    }
 
     @Override
     public boolean equals(Object obj) {

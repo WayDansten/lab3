@@ -1,12 +1,11 @@
 package objects;
 
-import interfaces.GeneralActions;
 import interfaces.MentalActions;
 import interfaces.PhysicalActions;
 import interfaces.VoiceActions;
-import enums.*;
+import enums.Gender;
 
-public class Human implements VoiceActions, PhysicalActions, MentalActions, GeneralActions {
+public class Human implements VoiceActions, PhysicalActions, MentalActions {
     private String name;
     private final int dna;
     private final Gender gender;
@@ -24,86 +23,68 @@ public class Human implements VoiceActions, PhysicalActions, MentalActions, Gene
     }
 
     @Override
-    public void say(String message, Human h, Truth t) {
+    public void say(String phrase) {
         switch (this.gender) {
-            case MALE -> System.out.print(this + (t + "сказал ") + h + message);
-            case FEMALE -> System.out.print(this + (t + "сказала ") + h + message);
-        }
-    }
-    @Override
-    public void say(String message, Truth t) {
-        switch (this.gender) {
-            case MALE -> System.out.print(this + (t + "говорил ") + message);
-            case FEMALE -> System.out.print(this + (t + "говорила ") + message);
+            case MALE -> System.out.print(this.toString() + " говорил " + phrase);
+            case FEMALE -> System.out.print(this.toString() + " говорила " + phrase);
         }
     }
 
     @Override
-    public void climb(Truth t, Object o) {
+    public void climb(Roof r) {
         switch (this.gender) {
-            case MALE -> System.out.print(this + (t + "залез на ") + o);
-            case FEMALE -> System.out.print(this + (t + "залезла на ") + o);
+            case MALE -> System.out.print(this.toString() + " залез на " + r);
+            case FEMALE -> System.out.print(this.toString() + " залезла на " + r);
         }
     }
 
     @Override
-    public void climb(Truth t) {
-        switch (this.gender) {
-            case MALE -> System.out.print(this + (t + "залез "));
-            case FEMALE -> System.out.print(this + (t + "залезла "));
-        }
-    }
-
-    @Override
-    public void go(Truth t) {
+    public void go() {
         switch(this.gender) {
-            case MALE -> System.out.print(this + (t + "пошёл "));
-            case FEMALE -> System.out.print(this + (t + "пошла "));
+            case MALE -> System.out.print(this.toString() + " пошёл ");
+            case FEMALE -> System.out.print(this.toString() + " пошла ");
         }
     }
 
     @Override
-    public void see(Truth t, String seenEvent) {
+    public void see(String seenEvent) {
         switch(this.gender) {
-            case MALE -> System.out.print(this + (t + "видел ") + seenEvent);
-            case FEMALE -> System.out.print(this + (t + "видела ") + seenEvent);
+            case MALE -> System.out.print(this.toString() + " видел " + seenEvent);
+            case FEMALE -> System.out.print(this.toString() + " видела " + seenEvent);
         }
     }
 
     @Override
-    public void show(Truth t, Object shownObject) {
+    public void show(Object shownObject) {
         switch(this.gender) {
-            case MALE -> System.out.print(this + (t + "показал ") + shownObject);
-            case FEMALE -> System.out.print(this + (t + "показала ") + shownObject);
+            case MALE -> System.out.print(this.toString() + " показал " + shownObject.toString());
+            case FEMALE -> System.out.print(this.toString() + " показала " + shownObject.toString());
         }
     }
 
     @Override
-    public void decide(String decision, Truth t) {
+    public void decide(String decision) {
         switch (this.gender) {
-            case MALE -> System.out.print(this + (t + "решил ") + decision);
-            case FEMALE -> System.out.print(this + (t + "решила ") + decision);
+            case MALE -> System.out.print(this.toString() + " решил " + decision);
+            case FEMALE -> System.out.print(this.toString() + " решила " + decision);
         }
     }
 
     @Override
-    public void understand(String thought, Truth t) {
+    public void understand(String thought) {
         switch (this.gender) {
-            case MALE -> System.out.print(this + (t + "понимал ") + thought);
-            case FEMALE -> System.out.print(this + (t + "понимала ") + thought);
+            case MALE -> System.out.print(this.toString() + " понимал " + thought);
+            case FEMALE -> System.out.print(this.toString() + " понимала " + thought);
         }
     }
 
     @Override
-    public void know(String knowledge, Truth t) {
+    public void know(String knowledge) {
         switch (this.gender) {
-            case MALE -> System.out.print(this + (t + "знал ") + knowledge);
-            case FEMALE -> System.out.print(this + (t + "знала ") + knowledge);
+            case MALE -> System.out.print(this.toString() + " знал " + knowledge);
+            case FEMALE -> System.out.print(this.toString() + " знала " + knowledge);
         }
     }
-
-    @Override
-    public void exist() {System.out.print(this + " существует ");}
 
     @Override
     public String toString() { return name; }
@@ -128,6 +109,8 @@ public class Human implements VoiceActions, PhysicalActions, MentalActions, Gene
         return name;
     }
 
-    public Gender getGender() {return this.gender;}
+    public Gender getGender() {
+        return this.gender;
+    }
 
 }

@@ -13,14 +13,23 @@ public class TelevisionProgramme extends DigitalMedia {
         this.length = length;
     }
 
-    public void setLength(int length) {this.length = length;}
-    public int getLength() {return this.length;}
+    public void setLength(int length) {
+        this.length = length;
+    }
+    
+    public int getLength() {
+        return this.length;
+    }
 
     @Override
-    public String toString() {return "Телевидение";}
+    public String toString() {
+        return "Телевидение";
+    }
 
     @Override
-    public int hashCode() {return Objects.hash(this.length, this.getHeading(), this.getInformation(), this.getMediaType());}
+    public int hashCode() {
+        return Objects.hash(this.length, this.getHeading(), this.getInformation(), this.getMediaType());
+    }
 
     @Override
     public boolean equals(Object obj) {

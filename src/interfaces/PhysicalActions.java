@@ -1,14 +1,12 @@
 package interfaces;
 
-import enums.Gender;
-import enums.Truth;
+import objects.Roof;
 
 public interface PhysicalActions {
 
-    public void climb(Truth t);
-    public void climb(Truth t, Object o);
-    public void go(Truth t);
-    public void see(Truth t, String seenEvent);
-    public void show(Truth t, Object shownObject);
+    public void climb(Roof r);
+    public void go();
+    public void see(String seenEvent);
+    public void show(Object shownObject);
 
 }

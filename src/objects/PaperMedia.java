@@ -9,7 +9,7 @@ public abstract class PaperMedia extends Media implements PaperMediaActions {
     }
 
     @Override
-    public void printout() {
+    public void printOut() {
         System.out.print("Напечатан(а) " + this + " под заголовком \"" + this.getHeading() + "\" ");
     }
 
@@ -19,6 +19,8 @@ public abstract class PaperMedia extends Media implements PaperMediaActions {
     }
 
     @Override
-    public void read() {System.out.print("В " + this + " написано: " + super.getInformation());}
+    public void read() {
+        System.out.print("В " + this + " написано: " + super.getInformation());
+    }
 
 }

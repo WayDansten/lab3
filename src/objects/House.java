@@ -15,16 +15,31 @@ public class House {
         this.roof = new Roof(roofMaterial);
     }
 
-    public int getCapacity() {return this.capacity;}
-    public void setHouseName(String houseName) {this.houseName = houseName;}
-    public String getHouseName() {return this.houseName;}
-    public String getRoof() {return this.roof.toString();}
+    public int getCapacity() {
+        return this.capacity;
+    }
+    
+    public void setHouseName(String houseName) {
+        this.houseName = houseName;
+    }
+    
+    public String getHouseName() {
+        return this.houseName;
+    }
+    
+    public Roof getRoof() {
+        return this.roof;
+    }
 
     @Override
-    public String toString() {return houseName;}
+    public String toString() {
+        return houseName;
+    }
 
     @Override
-    public int hashCode() {return Objects.hash(this.capacity, this.houseName, this.roof);}
+    public int hashCode() {
+        return Objects.hash(this.capacity, this.houseName, this.roof);
+    }
 
     @Override
     public boolean equals(Object obj) {
